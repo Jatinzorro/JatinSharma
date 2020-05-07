@@ -1,0 +1,20 @@
+<!--This is Root Html Code Whenever Website is loaded this page will open
+It is redirecting to 2 components
+1.View Product
+2.Add New Product
+-->
+<div  class="container-fluid">  
+ <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
+    
+      <ul class="navbar-nav">  
+        <li class="nav-item ">  
+          <a routerLink="viewProduct" class="nav-link" class="btn btn-primary active" role="button" >View Product</a>  
+        </li>   
+        <li class="nav-item">  
+          <a  routerLink="addProduct" class="nav-link" class="btn btn-primary active" role="button" >Add New Product</a>  
+        </li>            
+      </ul>  
+    </nav>     
+  </div>  
+<router-outlet></router-outlet>
+

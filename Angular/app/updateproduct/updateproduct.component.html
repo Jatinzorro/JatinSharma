@@ -1,0 +1,56 @@
+<!--This is the HTML Code for Update component, This Code contains a form which is taking input data from user.
+This form is redirected from the View Component (Update Button)
+-->
+<body>
+  <h4 style="text-align: center;font-style: italic;">Update Product<img src="assets/pixel4.png" width="2%" height="2%" style="margin-left: 10px;"></h4>
+  <form #formdata="ngForm" class="form-horizontal" (ngSubmit)="updateProduct()">
+      <table align="center" cellpadding = "10"> 
+          <tr>
+            <td>Product Name</td>
+            <td><input type="text" name="name" placeholder="enter product name" [(ngModel)]="product.name" class="form-control" #valid1="ngModel" >
+            </td>
+         </tr>
+                       <br>
+          <tr>
+            <td>Product Quantity</td>
+           <td> <input type="number" name="productQuantity" placeholder="enter Quantity" [(ngModel)]="product.productQuantity" class="form-control" #valid1="ngModel" >
+           </td>
+            <div class="alert alert-danger" role="alert" *ngIf="valid1.invalid && valid1.touched">invalid qtt</div>
+          </tr>
+          <br>
+          <tr>
+            <td>Product Price</td>
+            <td><input type="number" name="productMRP" placeholder="enter product Price" [(ngModel)]="product.productMRP" class="form-control" #valid1="ngModel" >
+            </td>
+              <div class="alert alert-danger" role="alert" *ngIf="valid1.invalid && valid1.touched">invalid Id</div>
+          </tr>
+          <br>
+          <tr>
+            <td>Product Manufacturer</td>
+            <td>
+            <input type="text" name="productManufacturer" placeholder="enter Brand" [(ngModel)]="product.productManufacturer" class="form-control" #valid1="ngModel" >
+            </td>
+            <div class="alert alert-danger" role="alert" *ngIf="valid1.invalid && valid1.touched">invalid Id</div>
+          </tr>
+          <br>
+          <tr>
+            <td>Product Size</td>
+            <td><input type="number" name="productSize" placeholder="enter product Size" [(ngModel)]="product.productSize" class="form-control" #valid1="ngModel" >
+            </td>
+              <div class="alert alert-danger" role="alert" *ngIf="valid1.invalid && valid1.touched">invalid Id</div>
+          </tr>
+          <br>
+         
+      </table>
+  
+  <div style="text-align: center;"><input type="submit" name="butt"   class="btn btn-primary"> 
+      </div>
+ </form>
+</body>
+
+
+
+
+
+
+  

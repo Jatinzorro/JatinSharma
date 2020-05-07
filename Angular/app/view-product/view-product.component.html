@@ -1,0 +1,53 @@
+<!--This HTML code is for Displaying the All products which Are Present in database
+-->
+
+
+<div class="panel panel-default">  
+    <div class="panel-heading">  
+        <div class="row" [hidden]="!deleteMessage">  
+                <div class="col-sm-4"></div>  
+                  <div class="col-sm-4">  
+                          <div class="alert alert-info alert-dismissible">  
+                                  <button type="button" class="close" data-dismiss="alert">×</button>  
+                                  <strong>Product Data Deleted</strong>  
+                          </div>  
+                  </div>  
+                <div class="col-sm-4"></div>  
+        </div>             
+    </div>  
+    
+      
+    <div class="panel-body">  
+        <table  class="table table-hover table-sm"  >  
+            <thead class="thead-light">  
+                <tr>  
+                    <th>Product Id</th>  
+                    <th>Product Name</th>  
+                    <th>Quantity</th>
+                    <th>MRP</th>
+                    <th>Manufacturer</th>
+                    <th>Size</th> 
+                    <th>Action</th>  
+                      
+                </tr>  
+            </thead>  
+            <tbody> 
+                 <tr *ngFor="let product of products ; let i = index">  
+                    <td>{{product.productId}}</td>  
+                    <td>{{product.name}}</td> 
+                    <td>{{product.productQuantity}}</td> 
+                    <td>{{product.productMRP}}</td> 
+                    <td>{{product.productManufacturer}}</td> 
+                    <td>{{product.productSize}}</td>  
+                    <td><button (click)="deleteProduct(product.productId)" class='btn btn-primary'><i class="fa fa-futboll-0">Delete</i></button>   
+                      
+                        <a class="btn btn-primary" (click)="update(i)" routerLink="/updateproduct">Update</a>
+                        
+                        </td>  
+                  </tr>   
+            </tbody><br>  
+        </table>  
+    </div>  
+  </div>   
+    
+  
